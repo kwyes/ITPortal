@@ -1,0 +1,142 @@
+<div class="modal fade modal-primary" id="regDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="card card-login card-plain">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="header header-primary text-center">
+                    <h2 class="title"></h2>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <form id="regDeviceMdlValidation" action="" method="">
+                            <input type="hidden" name="studentId" class="regDevice-stuId">
+                            <input type="hidden" name="deviceId" class="regDevice-deviceId">
+                            <input type="checkbox" class="regDevice-updated" style="display:none">
+                            <table id="regDeviceModal-table" class="table table-hover" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>Category *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <select name="category" class="table-category form-control">
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-bhsdNum">
+                                        <td class="name-bhsdNum">BHSD Number *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input name="bhsdNum" class="form-control table-bhsdNum" maxlength="4">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <select name="type" class="table-type form-control" required>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-manufacturer">
+                                        <td>Manufacturer *</td>
+                                        <td>
+                                            <div class="form-group manufact-form">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-model">
+                                        <td>Model *</td>
+                                        <td>
+                                            <div class="form-group model-form">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-macAddress">
+                                        <td>MAC Address *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" name="macAddress" class="form-control table-macAddress"
+                                                    minlength="17" oninvalid="this.setCustomValidity('Please')"
+                                                    required>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-registerTo">
+                                        <td>Register to *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <select name="registerTo" class="table-registerTo form-control"
+                                                    required>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-network">
+                                        <td>Network Registration *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <select name="network" class="table-network form-control">
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Device Usage *</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <select name="usage" class="table-usage form-control">
+                                                </select>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Remarks</td>
+                                        <td><textarea name="remark" rows="5" class="form-control table-remark"
+                                                maxlength="300"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <label class="last-modify"></label>
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-sm btn-success regDevice-add-btn">SAVE</button>
+                                <button type="button" class="btn btn-sm btn-success regDevice-update-btn">SAVE</button>
+                                <button type="button" class="btn btn-sm regDevice-close-btn">cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    // var cleaveCustom = new Cleave('.table-macAddress', {
+    //     blocks: [2, 2, 2, 2, 2, 2],
+    //     delimiter: ':',
+    // });
+
+    var cleaveCustom2 = new Cleave('.table-bhsdNum', {
+        numeralDecimalMark: '',
+        delimiter: '',
+        numeral: true,
+        rawValueTrimPrefix: true,
+        numeralPositiveOnly: true
+    });
+</script>

@@ -1,0 +1,206 @@
+<div class="main-panel">
+
+  <nav class="navbar navbar-transparent navbar-absolute">
+    <div class="container-fluid">
+      <div class="navbar-minimize">
+        <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
+          <i class="material-icons visible-on-sidebar-regular">more_vert</i>
+          <i class="material-icons visible-on-sidebar-mini">view_list</i>
+        </button>
+      </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h2 class="pageTitle"> Dashboard </h2>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="separator hidden-lg hidden-md"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="card dashboard-card">
+            <div class="card-content">
+              <h4 class="card-title dashboard-card-title dashboard-semesterName"></h4>
+              <p class="category current-term-p"></p>
+              <!-- <div class="table-responsive"> -->
+              <div class="progress progress-striped active">
+                <div class="progress-bar">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card dashboard-card">
+            <div class="card-content">
+              <h4 class="card-title dashboard-card-title"><i class="material-icons">devices</i>Student End Devices
+                Counts</h4>
+
+              <table id="dashboard-devices-table" class="table table-borderless dashboard-device-main-table" width="100%"
+                cellspacing="0">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Current</th>
+                    <th>New</th>
+                    <th>Not Current</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-line font-weight-bold">
+                    <td># of Students</td>
+                    <td><span class="current-student">0</span></td>
+                    <td><span class="new-student">0</span></td>
+                    <td><span class="notcurrent-student">0</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="pd-tb-0">
+                      <table class="table table-borderless dashboard-bhsd-Table">
+                        <tbody>
+                          <tr class="font-weight-bold">
+                            <td># of BHSDs</td>
+                            <td><span class="total-bhsd-current">0</span></td>
+                            <td><span class="total-bhsd-new">0</span></td>
+                            <td><span class="total-bhsd-notcurrent">0</span></td>
+                          </tr>
+                          <tr>
+                            <td class="sub-header">Pending</td>
+                            <td><span class="pending-bhsd-current">0</span></td>
+                            <td><span class="pending-bhsd-new">0</span></td>
+                            <td><span class="pending-bhsd-notcurrent">0</span></td>
+                          </tr>
+                          <tr>
+                            <td class="sub-header">Registered</td>
+                            <td><span class="registered-bhsd-current">0</span></td>
+                            <td><span class="registered-bhsd-new">0</span></td>
+                            <td><span class="registered-bhsd-notcurrent">0</span></td>
+                          </tr>
+                          <tr class="border-line">
+                            <td class="sub-header">Removed</td>
+                            <td><span class="removed-bhsd-current">0</span></td>
+                            <td><span class="removed-bhsd-new">0</span></td>
+                            <td><span class="removed-bhsd-notcurrent">0</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table table-borderless dashboard-byod-Table">
+                        <tbody>
+                          <tr class="font-weight-bold">
+                            <td># of BYODs</td>
+                            <td><span class="total-byod-current">0</span></td>
+                            <td><span class="total-byod-new">0</span></td>
+                            <td><span class="total-byod-notcurrent">0</span></td>
+                          </tr>
+                          <tr class="byodPending">
+                            <td class="sub-header">Pending</td>
+                            <td><span class="pending-byod-current">0</span></td>
+                            <td><span class="pending-byod-new">0</span></td>
+                            <td><span class="pending-byod-notcurrent">0</span></td>
+                          </tr>
+                          <tr class="byodPending">
+                            <td class="sub-header">Registered</td>
+                            <td><span class="registered-byod-current">0</span></td>
+                            <td><span class="registered-byod-new">0</span></td>
+                            <td><span class="registered-byod-notcurrent">0</span></td>
+                          </tr>
+                          <tr class="border-line byodPending">
+                            <td class="sub-header">Removed</td>
+                            <td><span class="removed-byod-current">0</span></td>
+                            <td><span class="removed-byod-new">0</span></td>
+                            <td><span class="removed-byod-notcurrent">0</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="pd-tb-0">
+                      <table class="table table-borderless dashboard-loaner-Table">
+                        <tr class="font-weight-bold">
+                          <td># of LOANERs</td>
+                          <td><span class="total-loaner-current">0</span></td>
+                          <td><span class="total-loaner-new">0</span></td>
+                          <td><span class="total-loaner-notcurrent">0</span></td>
+                        </tr>
+                        <tr>
+                          <td class="sub-header">Loaned</td>
+                          <td><span class="loaned-loaner-current">0</span></td>
+                          <td><span class="loaned-loaner-new">0</span></td>
+                          <td><span class="loaned-loaner-notcurrent">0</span></td>
+                        </tr>
+                        <tr>
+                          <td class="sub-header">Returned</td>
+                          <td><span class="returned-loaner-current">0</span></td>
+                          <td><span class="returned-loaner-new">0</span></td>
+                          <td><span class="returned-loaner-notcurrent">0</span></td>
+                        </tr>
+                        <tr>
+                          <td class="sub-header">Lost</td>
+                          <td><span class="lost-loaner-current">0</span></td>
+                          <td><span class="lost-loaner-new">0</span></td>
+                          <td><span class="lost-loaner-notcurrent">0</span></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="col-md-6">
+          <div class="card dashboard-card">
+            <div class="card-content">
+              <h4 class="card-title dashboard-card-title"><i class="material-icons">group</i>Staff User Counts</h4>
+              <table class="table table-hover dashboard-staffcounts-table">
+                <thead>
+                  <th>Department \ School ID</th>
+                  <th>Total</th>
+                  <th>BHS</th>
+                  <th>BSS</th>
+                  <th>BCL</th>
+                  <th>BCI</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    dashBoard_numDevice();
+    staffUserCounts();
+    showCurrentTerm();
+  });
+</script>

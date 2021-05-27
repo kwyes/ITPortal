@@ -1,0 +1,81 @@
+<div class="modal fade modal-primary" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="card card-login card-plain">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+
+                    <div class="header header-primary text-center">
+                        <h4>Select person from the table below.</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="input-group">
+                          <div class="input-group-btn search-panel">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                              	<span id="search_concept">Type</span> <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu">
+                                <li><a href="">Student</a></li>
+                                <li><a href="">Staff</a></li>
+                              </ul>
+                          </div>
+                          <input class="form-control search_txt" type="text" name="" value="" placeholder="Type first or last name to search">
+                          <span class="input-group-btn">
+                              <button id="btn-search-person" class="btn btn-default" type="button"><i class="material-icons">search</i></button>
+                          </span>
+                      </div>
+
+                        <table id="searchMdl-table" class="table table-hover" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                  <th class="text-center">User ID</th>
+                                  <th class="text-center">NAME</th>
+                                  <th class="text-center">STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer text-right">
+                        <button type="button" class="btn btn-fill btn-default search-close-btn" data-dismiss="modal" aria-label="Close">Close
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  $(document).ready(function(e){
+    $('.search-panel .dropdown-menu').find('a').click(function(e) {
+		e.preventDefault();
+		var concept = $(this).text();
+		$('.search-panel span#search_concept').text(concept);
+	});
+  $('#btn-search-person').click(function(event) {
+    var s = $('.search_txt').val();
+    var t = $('#search_concept').text();
+    if(!s) {
+      alert('Type something');
+      return;
+    }
+    if(t == 'Type') {
+      alert('Please Choose staff of student');
+      return
+    }
+    SearchStaffOrStudent(s,t);
+  });
+
+  
+
+});
+</script>
