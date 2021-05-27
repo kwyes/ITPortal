@@ -27,8 +27,8 @@ function getEnvironmentSettings() {
                 'apiPath' => "https://{$hostName}/SAS-IT/api/index.php",
                 'adminApiPath' => "https://{$hostName}/SAS-IT/api/index.php",
                 'pdo' => array(
-                    'database' => 'mssql',
-                    'dsn' => 'odbc:Driver={SQL Server};Server=10.0.0.108;Database=Bodwell;Uid=sa;Pwd=Yv9FrUpx0a;',
+                    'database' => '',
+                    'dsn' => '',
                 ),
                 'smtp' => array(
                     'debug' => false,
@@ -37,7 +37,7 @@ function getEnvironmentSettings() {
                     'secure' => 'TLS',
                     'auth' => true,
                     'username' => 'apikey',
-                    'password' => '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',
+                    'password' => '',
                 ),
             );
         case 'itadmin.bodwell.edu':
@@ -51,7 +51,7 @@ function getEnvironmentSettings() {
                 'type' => 'itadmin',
                 'pdo' => array(
                     'database' => 'mssql',
-                    'dsn' => 'odbc:Driver={SQL Server};Server=10.100.4.6;Database=Bodwell;Uid=web;Pwd=AJgw!cG4nw;',
+                    'dsn' => '',
                 ),
                 'smtp' => array(
                     'debug' => true,
@@ -60,7 +60,7 @@ function getEnvironmentSettings() {
                     'secure' => 'TLS',
                     'auth' => true,
                     'username' => 'apikey',
-                    'password' => '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',
+                    'password' => '',
                 ),
             );
         case 'dev.bodwell.edu':
@@ -76,7 +76,7 @@ function getEnvironmentSettings() {
                 'adminApiPath' => "https://{$hostName}/api/index.php",
                 'pdo' => array(
                     'database' => 'mssql',
-                    'dsn' => 'odbc:Driver={SQL Server};Server=10.100.0.5;Database=Bodwell;Uid=devweb;Pwd=9zQjq4WRgkFF;',
+                    'dsn' => '',
                 ),
                 'bypassAuth' => false,
                 'smtp' => array(
@@ -86,7 +86,7 @@ function getEnvironmentSettings() {
                   'secure' => 'TLS',
                   'auth' => true,
                   'username' => 'helpdesk50@bodwell.edu',
-                  'password' => 'Bodwell2020!',
+                  'password' => '',
                 ),
                 'backdoor' => $backdoor,
             );
@@ -103,7 +103,7 @@ function getEnvironmentSettings() {
             'adminApiPath' => "https://{$hostName}/SAS-IT/api/index.php",
             'pdo' => array(
                 'database' => 'mssql',
-                'dsn' => 'odbc:Driver={SQL Server};Server=10.0.0.209;Database=Bodwell;Uid=sa;Pwd=pm2em9GhOOWt;',
+                'dsn' => '',
             ),
             'bypassAuth' => false,
             'smtp' => array(
@@ -138,12 +138,12 @@ function getEnvironmentSettings() {
                     'staffRole' => '99',
                     'studentId' => '201500126',
                     'email' => 'dev.user201500126@student.bodwell.edu'.PHP_EOL,
-                    'password' => 'c4e7e3792c',
+                    'password' => '',
                 ),
                 'bypassAuth' => true,
                 'smtp' => array(
                     'debug' => 0,
-                    'host' => 'smtp.van.terago.ca',
+                    'host' => '',
                     'port' => '25',
                     'secure' => '',
                     'auth' => false,
